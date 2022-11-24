@@ -1,0 +1,28 @@
+-- Create a clothing store database
+
+CREATE TABLE justinian (id INTEGER PRIMARY KEY, gender TEXT, bottom_type TEXT, color TEXT, price INTEGER, size INTEGER);
+
+INSERT INTO justinian VALUES (1,"M","Jeans","Black","49.99","36");
+INSERT INTO justinian VALUES (2,"M","Cargos","Black","64.99","36");
+INSERT INTO justinian VALUES (3,"M","Sweatpants","Black","34.99","L");
+INSERT INTO justinian VALUES (4,"M","Shorts","Black","29.99","L");
+INSERT INTO justinian VALUES (5,"M","Boxers","Black","10.99","L");
+INSERT INTO justinian VALUES (6,"M","Jeans","Gray","49.99","36");
+INSERT INTO justinian VALUES (7,"M","Cargos","Gray","64.99","36");
+INSERT INTO justinian VALUES (8,"M","Sweatpants","Gray","34.99","L");
+INSERT INTO justinian VALUES (9,"M","Shorts","Gray","29.99","L");
+INSERT INTO justinian VALUES (10,"M","Boxers","Gray","10.99","L");
+INSERT INTO justinian VALUES (11,"M","Jeans","Navy","49.99","36");
+INSERT INTO justinian VALUES (12,"M","Cargos","Navy","64.99","36");
+INSERT INTO justinian VALUES (13,"M","Sweatpants","Navy","34.99","L");
+INSERT INTO justinian VALUES (14,"M","Shorts","Navy","29.99","L");
+INSERT INTO justinian VALUES (15,"M","Boxers","Navy","10.99","L");
+
+--display the database ordered by color.
+SELECT * FROM justinian;
+ORDER BY color;
+
+--what is the  avg price of items in the jeans section?
+SELECT AVG(price)
+FROM store
+where section="jeans";
